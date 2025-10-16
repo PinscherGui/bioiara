@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iara Anjos Vieira - Terapias Holísticas</title>
+
+    <!-- Favicon (Opcional: Crie um ícone para ela) --><!-- <link rel="icon" href="images/favicon-iara.png" type="image/png"> --><!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(-45deg, #e0c3fc, #8ec5fc, #d4fc79, #fccb90);
+            background-size: 400% 400%;
+            animation: animated-gradient 15s ease infinite;
+        }
+
+        @keyframes animated-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Botão Principal */
+        .btn-primary {
+            background-color: #3CB371; /* Verde Cura */
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-primary:hover {
+            background-color: #2E8B57;
+        }
+
+        /* Botões Secundários */
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #3D3D3D;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 text-gray-800 relative overflow-x-hidden">
+    
+    <!-- Animação de Partículas no Fundo --><div id="tsparticles" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- Container Principal --><main class="w-full max-w-md mx-auto z-10 py-8">
+        <div class="bg-white/60 backdrop-blur-xl border border-white/30 rounded-3xl p-6 md:p-8 text-center shadow-lg">
+            
+            <!-- Seção do Perfil --><header class="flex flex-col items-center mb-8">
+                <img 
+                    class="w-28 h-28 rounded-full object-cover border-4 border-white shadow-md mb-4" 
+                    src="images/iara-perfil.jpg" 
+                    alt="Foto de Perfil de Iara Anjos Vieira"
+                >
+                <h1 class="text-2xl font-bold text-gray-900 tracking-wide">Iara Anjos Vieira</h1>
+                <p class="text-md text-gray-600 font-light mt-1 px-4">Promovendo sua saúde física e mental através de terapias energéticas.</p>
+            </header>
+
+            <!-- Seção de Links --><section class="space-y-4 w-full">
+                <!-- Botão Destaque: Agendamento --><a href="https://wa.me/5565999874712?text=Olá,%20Iara!%20Gostaria%20de%20agendar%20uma%20sessão." target="_blank" class="block btn-primary rounded-2xl p-4 w-full text-center transition-all duration-300 ease-in-out hover:scale-105 shadow-md">
+                    <span class="font-semibold text-lg">Agende sua Sessão</span>
+                </a>
+
+                <!-- Outros Botões --><a href="#" target="_blank" class="block btn-secondary rounded-2xl p-4 w-full text-center transition-all duration-300 ease-in-out hover:scale-105">
+                    <span class="font-semibold text-lg">Conheça as Terapias</span>
+                </a>
+                
+                <a href="#" target="_blank" class="block btn-secondary rounded-2xl p-4 w-full text-center transition-all duration-300 ease-in-out hover:scale-105">
+                    <span class="font-semibold text-lg">Massagens Terapêuticas</span>
+                </a>
+
+                <a href="#" target="_blank" class="block btn-secondary rounded-2xl p-4 w-full text-center transition-all duration-300 ease-in-out hover:scale-105">
+                    <span class="font-semibold text-lg">Nossos Produtos Artesanais</span>
+                </a>
+            </section>
+
+            <!-- Seção de Ícones Sociais --><footer class="mt-8 text-center">
+                <div class="flex items-center justify-center space-x-6 mb-4">
+                    <!-- Instagram --><a href="https://www.instagram.com/iaraanjosvieira" target="_blank" class="transition-transform duration-300 hover:scale-110" aria-label="Instagram">
+                        <img src="images/instagram.png" alt="Instagram" class="w-7 h-7">
+                    </a>
+                    <!-- Facebook --><a href="https://www.facebook.com/iara.anjosvieira.3?locale=pt_BR" target="_blank" class="transition-transform duration-300 hover:scale-110" aria-label="Facebook">
+                        <img src="images/facebook.png" alt="Facebook" class="w-7 h-7">
+                    </a>
+                </div>
+                <!-- Créditos --><a href="https://greinaldodigital.netlify.app" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-gray-800 transition-colors duration-300">
+                    Desenvolvido por GR Digital
+                </a>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Script para Partículas --><script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 20, density: { enable: true, value_area: 800 } },
+                    shape: {
+                        type: "image",
+                        image: [
+                            { src: "images/geometria1.png", width: 100, height: 100 },
+                            { src: "images/geometria2.png", width: 100, height: 100 },
+                            { src: "images/geometria3.png", width: 100, height: 100 },
+                            { src: "images/geometria4.png", width: 100, height: 100 }
+                        ]
+                    },
+                    opacity: { value: 0.3, random: { enable: true, minimumValue: 0.1 }, anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false } },
+                    size: { value: 25, random: { enable: true, minimumValue: 15 } }, /* Aumentado um pouco o tamanho */
+                    rotate: {
+                        value: 0,
+                        random: true,
+                        direction: "random",
+                        animation: {
+                            enable: true,
+                            speed: 5, /* Velocidade da rotação */
+                            sync: false
+                        }
+                    },
+                    move: { 
+                        enable: true, 
+                        speed: 0.5, /* Velocidade de deslizamento reduzida para efeito de chuva */
+                        direction: "bottom-left", /* Direção de deslizamento */
+                        random: true, 
+                        straight: false, 
+                        out_mode: "out",
+                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                    }
+                },
+                detectRetina: true,
+                background: { color: "transparent" }
+            });
+        });
+    </script>
+</body>
+</html>
+
